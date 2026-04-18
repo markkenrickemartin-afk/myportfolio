@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gallery | Mark Martin</title>
+    <div th:replace="~{fragments :: header-css}"></div>
+</head>
+<body>
+    <div th:replace="~{fragments :: nav-menu}"></div>
+    <div class="container">
+        <h2 class="section-title">Moments & Milestones</h2>
+        <div class="grid">
+            <div class="card"><img th:src="@{/images/birthday_picture.jpg}"><p>Birthday Celebration</p></div>
+            <div class="card"><img th:src="@{/images/girlfriend_flower_and_donut.jpg}"><p>Cherished Memories</p></div>
+            <div class="card"><img th:src="@{/images/pet_cat.jpg}"><p>My Study Buddy (Cat)</p></div>
+            <div class="card"><img th:src="@{/images/pet_dog.jpg}"><p>My Best Friend (Dog)</p></div>
+            <div class="card"><img th:src="@{/images/phpmyadmin_database.jpg}"><p>Database Architecture</p></div>
+            <div class="card"><img th:src="@{/images/terminal_image_of_mysql.jpg}"><p>Command Line Mastery</p></div>
+        </div>
+    </div>
+</body>
+</html>

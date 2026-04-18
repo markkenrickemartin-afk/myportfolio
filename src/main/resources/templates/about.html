@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>About Me | Mark Martin</title>
+    <div th:replace="~{fragments :: header-css}"></div>
+</head>
+<body>
+    <div th:replace="~{fragments :: nav-menu}"></div>
+    <div class="container">
+        <h2 class="section-title">Who I Am</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>The Student Entrepreneur</h3>
+                <p>I am 20 years old and currently navigating my 2nd year of BSIT at NEUST. My passion lies in becoming a business owner, using IT as my competitive edge.</p>
+            </div>
+            <div class="card">
+                <img th:src="@{/images/chess_image.jpeg}" alt="Chess">
+                <h3>Strategy: Chess</h3>
+                <p>Chess isn't just a game; it's how I practice long-term planning and tactical execution—skills essential for business.</p>
+            </div>
+            <div class="card">
+                <img th:src="@{/images/mobile_legends_logo.png}" alt="MLBB">
+                <h3>Teamwork: Mobile Legends</h3>
+                <p>Competitive gaming taught me the importance of communication and knowing your role in a team environment.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

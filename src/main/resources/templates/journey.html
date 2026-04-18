@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Journey | Mark Martin</title>
+    <div th:replace="~{fragments :: header-css}"></div>
+</head>
+<body>
+    <div th:replace="~{fragments :: nav-menu}"></div>
+    <div class="container">
+        <h2 class="section-title">My College Journey</h2>
+        <div class="grid">
+            <div class="card">
+                <img th:src="@{/images/working_with_classmates.jpg}">
+                <p>Collaborating on our first UI design project at NEUST.</p>
+            </div>
+            <div class="card">
+                <img th:src="@{/images/working_with_classmates2.jpg}">
+                <p>Brainstorming business logic for our IT applications.</p>
+            </div>
+            <div class="card">
+                <img th:src="@{/images/arduino_wiring_diagram_project.jpg}">
+                <p>Hardware Exploration: Tackling the complexity of Arduino wiring.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Skills | Mark Martin</title>
+    <div th:replace="~{fragments :: header-css}"></div>
+</head>
+<body>
+    <div th:replace="~{fragments :: nav-menu}"></div>
+    <div class="container">
+        <h2 class="section-title">Tech Stack</h2>
+        <div class="grid" style="text-align: center;">
+            <div class="card"><img th:src="@{/images/html-5.png}" class="icon-img"><p>HTML5</p></div>
+            <div class="card"><img th:src="@{/images/css-3.png}" class="icon-img"><p>CSS3</p></div>
+            <div class="card"><img th:src="@{/images/js.png}" class="icon-img"><p>JavaScript</p></div>
+            <div class="card"><img th:src="@{/images/java.png}" class="icon-img"><p>Java Core</p></div>
+            <div class="card"><img th:src="@{/images/mysql.png}" class="icon-img"><p>MySQL</p></div>
+        </div>
+        <h2 class="section-title" style="margin-top: 80px;">Project Showcases</h2>
+        <div class="grid">
+            <div class="card"><img th:src="@{/images/home_page_figma.jpg}"><h3>UI Design</h3></div>
+            <div class="card"><img th:src="@{/images/cart_page_figma.jpg}"><h3>E-Commerce Cart</h3></div>
+        </div>
+    </div>
+</body>
+</html>

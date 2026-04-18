@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Mark Martin | BSIT Portfolio</title>
+    <div th:replace="~{fragments :: header-css}"></div>
+    <style>
+        /* This wrapper takes up the exact height of the screen minus the nav */
+        .main-wrapper {
+            height: calc(100vh - 80px); 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around; /* Spreads content vertically so it's not congested */
+            padding: 20px 0;
+        }
+
+        .hero-split {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-text { flex: 1.2; text-align: left; }
+        
+        .hero-image-container { 
+            flex: 0.8; 
+            display: flex; 
+            justify-content: flex-end; 
+        }
+
+        .hero-profile { 
+            width: 320px; /* Kept large but safe for most screens */
+            height: 320px; 
+            border-radius: 20px; 
+            object-fit: cover; 
+            border: 4px solid var(--primary);
+            box-shadow: 20px 20px 0px var(--card-bg);
+        }
+
+        .info-pill {
+            display: inline-block;
+            background: var(--card-bg);
+            padding: 10px 20px;
+            border-radius: 50px;
+            border-left: 4px solid var(--primary);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px; /* Keeps the airy feel */
+            margin-top: 20px;
+        }
+
+        .bio-item h4 { color: var(--primary); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 5px; }
+        .bio-item p { font-size: 1.1rem; font-weight: 500; }
+
+        /* The bottom grid stays at the bottom of the one-page view */
+        .bottom-skills {
+            margin-top: 20px;
+        }
+
+        @media (max-height: 700px) {
+            .hero-profile { width: 250px; height: 250px; }
+            .bio-grid { gap: 10px; }
+            h1 { font-size: 2.5rem !important; }
+        }
+
+        @media (max-width: 900px) {
+            .main-wrapper { height: auto; }
+            .hero-split { flex-direction: column-reverse; text-align: center; }
+            .hero-text, .hero-image-container { text-align: center; justify-content: center; }
+            .bio-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div th:replace="~{fragments :: nav-menu}"></div>
+
+    <div class="container main-wrapper">
+        <!-- TOP SECTION: Hero & Bio -->
+        <section class="hero-split">
+            <div class="hero-text">
+                <span class="info-pill">BSIT Student @ NEUST</span>
+                <h1 style="font-size: 3.5rem; line-height: 1.1; margin-bottom: 10px;">
+                    Mark Kenrick E. Martin
+                </h1>
+                
+                <div class="bio-grid">
+                    <div class="bio-item">
+                        <h4>Age & Gender</h4>
+                        <p>20 / Male</p>
+                    </div>
+                    <div class="bio-item">
+                        <h4>University</h4>
+                        <p>NEUST</p>
+                    </div>
+                    <div class="bio-item">
+                        <h4>Current Year</h4>
+                        <p>2nd Year Student</p>
+                    </div>
+                    <div class="bio-item">
+                        <h4>Career Goal</h4>
+                        <p>Business Owner</p>
+                    </div>
+                    <div class="bio-item">
+                        <h4>Main Hobbies</h4>
+                        <p>Chess & Mobile Legends</p>
+                    </div>
+                    <div class="bio-item">
+                        <h4>Location</h4>
+                        <p>Nueva Ecija, PH</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-container">
+                <img th:src="@{/images/profile.jpg}" alt="Mark Martin" class="hero-profile">
+            </div>
+        </section>
+        
+        <!-- BOTTOM SECTION: Skill Cards -->
+        <div class="grid bottom-skills">
+            <div class="card" style="padding: 20px; text-align: center;">
+                <img th:src="@{/images/java.png}" style="width: 40px; margin: 0 auto 10px;">
+                <p style="font-weight: 600;">Java Backend</p>
+            </div>
+            <div class="card" style="padding: 20px; text-align: center;">
+                <img th:src="@{/images/html-5.png}" style="width: 40px; margin: 0 auto 10px;">
+                <p style="font-weight: 600;">Frontend Web</p>
+            </div>
+            <div class="card" style="padding: 20px; text-align: center;">
+                <img th:src="@{/images/mysql.png}" style="width: 45px; margin: 0 auto 10px;">
+                <p style="font-weight: 600;">Database Mgmt</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
